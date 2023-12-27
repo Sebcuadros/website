@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "canvas-confetti": "^1.9.2",
     "frosted-ui": "^0.0.1-canary.12",
+    "gsap": "^3.12.4",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@types/canvas-confetti": "^1.6.4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

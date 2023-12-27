@@ -81,24 +81,26 @@ const Clock = () => {
   }, []);
 
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
-  const tooltipImageSrc = '/Schedule.png'
+  const tooltipImageSrc = '/Schedule.png';
 
   return (
-    <div>
-      <h1>I'm in Brooklyn, it's currently {currentTime}</h1>
-      <h1>Atm you can probably catch me {getTimeBasedString() + ' '}
+    <div className="grid">
+      <h1 className="place-self-end">I'm in Brooklyn, it's currently {currentTime}</h1>
+      <h1 className="place-self-end">Atm you can probably catch me {getTimeBasedString()}{' '}
       <span
-        className="text-xs"
         onMouseOver={() => setIsTooltipVisible(true)}
         onMouseOut={() => setIsTooltipVisible(false)}
+        className="bg-white hover:bg-gradient-to-r bg-clip-text text-transparent from-purple-400 via-blue-400 to-purple-500 animate-text"
+      >
+       ⓘ
+      </span>
+        <div
+        className={`absolute h-screen rounded shadow-lg text-xs transition-opacity duration-1000 ease-in-out ${
+          isTooltipVisible ? 'opacity-100' : 'opacity-0'
+        }`}
         >
-        ⓘ
-        </span>
-        {isTooltipVisible && (
-          <div className="absolute">
-            <img src={tooltipImageSrc} alt="Tooltip" />
-          </div>
-        )}
+          <img src={tooltipImageSrc} alt="Tooltip" />
+        </div>
       </h1>
     </div>
   );

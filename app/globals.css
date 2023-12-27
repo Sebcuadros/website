@@ -260,11 +260,3 @@ html, body {
     opacity: 0.7;
   }
 }
-
-.button-normal {
-  background-color: transparent; /* Or whatever your normal bg color is */
-}
-
-.button-selected {
-  background-color: snow; /* The bg color for a selected button */
-}
