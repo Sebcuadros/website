@@ -85,12 +85,12 @@ const Clock = () => {
 
   return (
     <div className="grid">
-      <h1 className="place-self-end">I'm in Brooklyn, it's currently {currentTime}</h1>
-      <h1 className="place-self-end">Atm you can probably catch me {getTimeBasedString()}{' '}
+      <h1 className="place-self-end text-xs">I'm in Brooklyn, it's currently {currentTime}</h1>
+      <h1 className="place-self-end text-xs">Atm you can probably catch me {getTimeBasedString()}{' '}
       <span
         onMouseOver={() => setIsTooltipVisible(true)}
         onMouseOut={() => setIsTooltipVisible(false)}
-        className="bg-white hover:bg-gradient-to-r bg-clip-text text-transparent from-purple-400 via-blue-400 to-purple-500 animate-text"
+        className="bg-white text-xs hover:bg-gradient-to-r bg-clip-text text-transparent from-purple-400 via-blue-400 to-purple-500 animate-text"
       >
        ⓘ
       </span>
