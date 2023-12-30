@@ -3,7 +3,7 @@ import Clock from './Clock';
 
 const Navbar: React.FC = () => {
     return (
-        <div className="relative grid h-20 w-full justify-end content-center pr-5 z-40">
+        <div className="relative grid h-20 w-full justify-end pr-5 z-10">
             <Clock />
         </div>
     )

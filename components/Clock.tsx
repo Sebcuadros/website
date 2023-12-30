@@ -84,24 +84,25 @@ const Clock = () => {
   const tooltipImageSrc = '/Schedule.png';
 
   return (
-    <div className="grid">
+    <div className="grid grid-rows-2">
       <h1 className="place-self-end text-xs">I'm in Brooklyn, it's currently {currentTime}</h1>
-      <h1 className="place-self-end text-xs">Atm you can probably catch me {getTimeBasedString()}{' '}
-      <span
-        onMouseOver={() => setIsTooltipVisible(true)}
-        onMouseOut={() => setIsTooltipVisible(false)}
-        className="bg-white text-xs hover:bg-gradient-to-r bg-clip-text text-transparent from-purple-400 via-blue-400 to-purple-500 animate-text"
-      >
-       ⓘ
-      </span>
+      <div className="place-self-end">
+        <h1 className="text-xs">Atm you can probably catch me {getTimeBasedString()}&nbsp;</h1>
+        <span
+          onMouseOver={() => setIsTooltipVisible(true)}
+          onMouseOut={() => setIsTooltipVisible(false)}
+          className="bg-white text-xs w-96 hover:bg-gradient-to-r bg-clip-text text-transparent from-purple-400 via-blue-400 to-purple-500 animate-text"
+        >
+        ⓘ
+        </span>
         <div
-        className={`absolute h-screen rounded shadow-lg text-xs transition-opacity duration-1000 ease-in-out ${
+        className={`absolute rounded shadow-lg text-xs transition-opacity duration-1000 ease-in-out ${
           isTooltipVisible ? 'opacity-100' : 'opacity-0'
         }`}
         >
           <img src={tooltipImageSrc} alt="Tooltip" />
         </div>
-      </h1>
+      </div>
     </div>
   );
 };
